@@ -6,9 +6,11 @@
   --accent-color: #2196f3;
   --footer-contact-item: rgba(255, 255, 255, 0.6);
   --bg-color-btn-filter: #f5f4fa;
+  --bg-color-icon-box: #f5f4fa;
   --color-logo: #000000;
   --btn-service-hover: #188ce8;
   --border-cads: 1px solid #eeeeee;
+  --icon: #afb1b8;
 }
 
 /* ----------common---------- */
@@ -138,10 +140,22 @@ button {
   color: var(--secondary-color);
 }
 
+.contact-item .icon {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+/* .contact-item .icon:hover {
+  fill: var(--accent-color);
+} */
+
 /* ----------hero---------- */
 
 .hero {
   max-width: 1600px;
+  height: 600px;
   padding: 200px 0;
   margin: 0 auto;
   text-align: center;
@@ -202,7 +216,20 @@ button {
   width: calc((100% - 3 * 30px) / 4);
 }
 
-.advantages-list .item::before {
+.icon-box {
+  height: 120px;
+  padding: 25px 100px;
+  margin-bottom: 30px;
+  background-color: var(--bg-color-icon-box);
+  border-radius: 4px;
+}
+
+.icon-box .icon {
+  width: 70px;
+  height: 70px;
+}
+
+/* .advantages-list .item::before {
   content: "";
   display: block;
   height: 120px;
@@ -212,7 +239,7 @@ button {
   background-repeat: no-repeat;
   background-position: center;
   background-color: var(--bg-color-btn-filter);
-}
+} */
 
 .advantages-list-title {
   margin-bottom: 10px;
@@ -307,7 +334,39 @@ button {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+  margin-bottom: 50px;
 }
+
+.clients-list {
+  display: flex;
+  gap: 30px;
+}
+
+.clients-list .item {
+  width: 170px;
+  height: 92px;
+   border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.clients-list .item:hover,
+.clients-list .item:focus {
+  border-color: #2196f3;
+}
+
+.clients-list .link {
+  display: block;
+    padding: 20px 65px;
+  }
+
+.icon-company {
+  display: block;
+  fill: var(--icon);
+ }
+
+ .clients-list .item:hover .icon-company {
+  fill: var(--accent-color);
+ }
 
 /* ----------filter---------- */
 
@@ -345,6 +404,11 @@ button {
   cursor: pointer;
 }
 
+.btn-filter:hover,
+.btn-filter:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
 .cads-list {
   display: flex;
   flex-wrap: wrap;
@@ -355,9 +419,8 @@ button {
   width: calc((100% - 2 * 30px) / 3);
 }
 
-.cads-list-item {
-  width: 370px;
-  display: block;
+.cads-list .item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .cads-content {
