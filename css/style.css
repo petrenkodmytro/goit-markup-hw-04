@@ -137,19 +137,21 @@ button {
 }
 
 .contact-item {
+  display: flex;
+  align-items: center;
   color: var(--secondary-color);
 }
 
 .contact-item .icon {
-  width: 16px;
-  height: 12px;
+  display: block;
   margin-right: 10px;
   fill: currentColor;
 }
 
-/* .contact-item .icon:hover {
+.contact-item:hover .icon,
+.contact-item:focus .icon {
   fill: var(--accent-color);
-} */
+}
 
 /* ----------hero---------- */
 
@@ -317,10 +319,39 @@ button {
 }
 
 .team-text {
+  margin-bottom: 16px;
   text-align: center;
   font-size: 16px;
   line-height: 1.19;
   color: var(--secondary-color);
+}
+
+.social-link {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-link .link {
+  display: block;
+  padding: 12px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.icon-social {
+  fill: var(--icon);
+}
+
+.social-link .link:hover,
+.social-link .link:focus {
+  background-color: var(--accent-color);
+}
+
+.social-link .link:hover .icon-social,
+.social-link .link:focus .icon-social {
+  fill: var(--secondary-bg-color);
 }
 
 /* ----------clients---------- */
@@ -342,31 +373,29 @@ button {
   gap: 30px;
 }
 
-.clients-list .item {
+.clients-list .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 170px;
   height: 92px;
-   border: 1px solid #afb1b8;
+  border: 1px solid #afb1b8;
   border-radius: 4px;
 }
 
-.clients-list .item:hover,
-.clients-list .item:focus {
-  border-color: #2196f3;
+.clients-list .link:hover,
+.clients-list .link:focus {
+  border-color: var(--accent-color);
 }
 
-.clients-list .link {
-  display: block;
-    padding: 20px 65px;
-  }
-
 .icon-company {
-  display: block;
   fill: var(--icon);
- }
+}
 
- .clients-list .item:hover .icon-company {
+.clients-list .link:hover .icon-company,
+.clients-list .link:focus .icon-company {
   fill: var(--accent-color);
- }
+}
 
 /* ----------filter---------- */
 
@@ -450,6 +479,10 @@ button {
   padding: 60px 0;
 }
 
+.footer-page {
+  display: flex;
+}
+
 .footer-logo {
   display: block;
   margin-bottom: 20px;
@@ -465,7 +498,6 @@ button {
 }
 
 .footer-contact {
-  margin: 0 auto;
   line-height: 1.71;
   font-style: normal;
 }
@@ -486,6 +518,33 @@ button {
 .footer-contact-item {
   line-height: 1.71;
   color: var(--footer-contact-item);
+}
+
+.join {
+  margin-left: 70px;
+  padding-top: 12px;
+}
+
+.join-text {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--secondary-bg-color);
+}
+
+.join .link {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.join .icon-social {
+  fill: var(--secondary-bg-color);
+}
+
+.join .link:hover,
+.join .link:focus {
+  background-color: var(--accent-color);
 }
 
 /* ----------effects---------- */
