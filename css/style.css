@@ -150,7 +150,7 @@ button {
 
 .contact-item:hover .icon,
 .contact-item:focus .icon {
-  fill: var(--accent-color);
+  fill: currentColor;
 }
 
 /* ----------hero---------- */
@@ -162,7 +162,7 @@ button {
   margin: 0 auto;
   text-align: center;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg.jpg);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -219,8 +219,10 @@ button {
 }
 
 .icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 120px;
-  padding: 25px 100px;
   margin-bottom: 30px;
   background-color: var(--bg-color-icon-box);
   border-radius: 4px;
@@ -333,25 +335,23 @@ button {
 }
 
 .social-link .link {
-  display: block;
-  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  color: var(--icon);
 }
 
 .icon-social {
-  fill: var(--icon);
+  fill: currentColor;
 }
 
 .social-link .link:hover,
 .social-link .link:focus {
   background-color: var(--accent-color);
-}
-
-.social-link .link:hover .icon-social,
-.social-link .link:focus .icon-social {
-  fill: var(--secondary-bg-color);
+  color: var(--secondary-bg-color);
 }
 
 /* ----------clients---------- */
@@ -381,20 +381,17 @@ button {
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  color: var(--icon);
 }
 
 .clients-list .link:hover,
 .clients-list .link:focus {
+  color: var(--accent-color);
   border-color: var(--accent-color);
 }
 
 .icon-company {
-  fill: var(--icon);
-}
-
-.clients-list .link:hover .icon-company,
-.clients-list .link:focus .icon-company {
-  fill: var(--accent-color);
+  fill: currentColor;
 }
 
 /* ----------filter---------- */
@@ -448,7 +445,12 @@ button {
   width: calc((100% - 2 * 30px) / 3);
 }
 
-.cads-list .item:hover {
+.cads-list-link {
+  display: block;
+}
+
+.cads-list-link:hover,
+.cads-list-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -481,6 +483,7 @@ button {
 
 .footer-page {
   display: flex;
+  align-items: baseline;
 }
 
 .footer-logo {
@@ -502,12 +505,8 @@ button {
   font-style: normal;
 }
 
-.footer-contact .item {
+.footer-contact .item:not(:last-child) {
   margin-bottom: 10px;
-}
-
-.footer-contact .item:last-child {
-  margin-bottom: 0;
 }
 
 .footer-contact-link {
@@ -522,7 +521,6 @@ button {
 
 .join {
   margin-left: 70px;
-  padding-top: 12px;
 }
 
 .join-text {
@@ -535,11 +533,12 @@ button {
 }
 
 .join .link {
+  color: var(--secondary-bg-color);
   background: rgba(255, 255, 255, 0.1);
 }
 
 .join .icon-social {
-  fill: var(--secondary-bg-color);
+  fill: currentColor;
 }
 
 .join .link:hover,
